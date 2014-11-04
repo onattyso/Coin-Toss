@@ -1,40 +1,4 @@
-<!doctype html>
-<html>
-	<head>
-		<title>learningthree.js boiler plate for three.js</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		
-			
-		<script src="vendor/three.js/Three.js"></script>
-		<script src="vendor/three.js/Detector.js"></script>
-		<!-- https://github.com/mrdoob/stats.js -->
-		<script src="vendor/three.js/Stats.js"></script>
-
-		<script src="vendor/threex/THREEx.screenshot.js"></script>
-		<script src="vendor/threex/THREEx.FullScreen.js"></script>
-		<script src="vendor/threex/THREEx.WindowResize.js"></script>
-		<script src="vendor/threex.dragpancontrols.js"></script>
-
-		<link  href="css/main.css" rel="stylesheet"/>
-	</head>
-<body>
-	<!-- three.js container -->
-    	<div id="container"></div>
-	<!-- info on screen display -->
-	<div id="info">
-		<div class="top">
-			<a href="http://learningthreejs.com/blog/2011/12/20/boilerplate-for-three-js/" target="_blank">LearningThree.js</a>
-			boiler plate for
-			<a href="https://github.com/mrdoob/three.js/" target="_blank">three.js</a>
-		</div>
-		<div class="bottom" id="inlineDoc" >
-			- <i>p</i> for screenshot
-		</div> 
-	</div> 
-
-	<script type="text/javascript">
-		var stats, scene, renderer;
+var stats, scene, renderer;
 		var camera, cameraControl;
 
 
@@ -88,7 +52,7 @@
 
 			// here you add your objects
 			// - you will most likely replace this part by your own
-			var geometry	= new THREE.TorusGeometry( 1, 0.42 );
+			var geometry	= new THREE.CylinderGeometry(100, 100, 15, 22, 3, false);
 			var material	= new THREE.MeshNormalMaterial();
 			var mesh	= new THREE.Mesh( geometry, material );
 			scene.add( mesh );
@@ -118,6 +82,3 @@
 			// actually render the scene
 			renderer.render( scene, camera );
 		}
-	</script>
-</body>
-</html>
